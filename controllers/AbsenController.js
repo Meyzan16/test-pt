@@ -156,7 +156,7 @@ export const getCheckInController = async (req,res) => {
 export const getCheckOutController = async (req,res) => {
     
         try {
-            const checkOut = await checkoutModel.find({}).populate('users');
+            const checkOut = await checkoutModel.find({}).populate('user');
 
             res.status(200).send({
                 success:true,
