@@ -10,12 +10,17 @@ import absenRoutes from './routes/absen.js';
 
 import cors from 'cors';
 import path from 'path';
+import {fileURLToPath} from 'url';
 
 //configure env
 dotenv.config();
 
 //database
 connectToDB();
+
+//esmodule fix
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //rest object
 const app = express();
