@@ -76,7 +76,7 @@ export const checkOutController = async (req,res ) => {
         
                         res.status(201).send({
                             success:true,
-                            message:"User absensi check out successfully ",
+                            message:" absensi check out successfully for today",
                         })
                         
                     }catch{
@@ -103,7 +103,7 @@ export const checkOutController = async (req,res ) => {
 
         res.status(201).send({
             success:true,
-            message:"absensi check out successfully ",
+            message:"absensi check out successfully for today",
         })
     }
 
