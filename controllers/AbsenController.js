@@ -9,7 +9,7 @@ export const checkInController = async (req,res ) => {
     const datenow = new Date().getDate();
     // const getdate = "";
     
-    const getuser = await checkinModel.findOne({user:userId});
+    const getuser = await checkinModel.findOne({user:userId}).sort({createdAt:-1});
     
     if(getuser)
     {
@@ -62,7 +62,7 @@ export const checkOutController = async (req,res ) => {
     const datenow = new Date().getDate();
     // const getdate = "";
     
-    const getuser = await checkoutModel.findOne({user:userId});
+    const getuser = await checkoutModel.findOne({user:userId}).sort({createdAt:-1});
     
     if(getuser){
         const getdate = new Date(getuser.checkOut);
